@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMark</title>
+    <link rel="stylesheet" href="./style/all.min.css">
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <div class="bookMarkBody d-flex flex-column justify-content-center align-items-center">
+    <h1 class="text-center my-5 title position-relative">Bookmarker</h1>
+    <div class="container main">
+        <h2 class="text-center "><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+
+        <label for="siteName" class="fs-5 ms-2 mb-2"><i class="fa-solid fa-book"></i> siteName</label>
+        <input oninput="validBookMarkName()" id="siteName" type="text" placeholder="siteName" class="form-control mb-3">
+        <label for="siteUrl" class="fs-5 ms-2 mb-2"><i class="fa-solid fa-link"></i> siteUrl</label>
+        <input  id="siteUrl" type="text" placeholder="siteURL" class="form-control  mb-3">
+        <div class="d-flex justify-content-center">
+        <button onclick="addUrl()" class="btn btn-info px-4 fs-5">submite</button>
+    </div>
+    </div>
+    <div class="container">
+        <table class="w-100 ">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tdata">
+                <tr class="w-100 ">
+                    <td>Index</td>
+                    <td>Website Name</td>
+                    <td>Visit</td>
+                    <td>Delete</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+    <script src="./script/bootstrap.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./script/main.js"></script>
+</body>
+
+</html>
